@@ -1,14 +1,25 @@
 import React from 'react';
-import {View, StyleSheet, Button, ImageBackground} from 'react-native';
+import {View, StyleSheet, Text, StatusBar } from 'react-native';
 
-const NotificationScreen = props => {
+export default class NotificationScreen extends React.Component{
 
-    return (
-        <Text>Notifs</Text>
-    )
+    static navigationOption = {
+
+    };
+
+    render(){
+    return(
+        <View styles={styles.container}>
+            <StatusBar barStyle="dark-content" />
+            <Text>Notifications</Text>
+        </View>
+    )}
 }
 
 const styles = StyleSheet.create({
-  });
-
-export default HomeScreen;
+  container: {
+      flex: 1 ,
+      alignItems: 'center',
+      justifyContent: 'center'
+  }
+})

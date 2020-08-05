@@ -1,13 +1,14 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StatusBar} from 'react-native';
 
-const STGScreen = props => {
-    return(
-        <View>
-            <Text>STG</Text>
-        </View>
-    );
+export default class STGScreen extends React.Component{
+    render(){
+        return(
+            <View>
+                <StatusBar barStyle="dark-content" />
+                <Text>STG</Text>
+            </View>
+        );
+    }
 }
 
-
-export default STGScreen;
