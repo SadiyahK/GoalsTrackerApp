@@ -1,24 +1,32 @@
 import React from 'react';
-import {View, StyleSheet, Button, ImageBackground} from 'react-native';
+import {View, StyleSheet, Button, ImageBackground, StatusBar} from 'react-native';
 
-const HomeScreen = props => {
+let imagePath = require("../images/pinkclouds.jpg");
 
-    let imagePath = require("../images/pinkclouds.jpg");
 
-    return (
-        <View style={styles.frame}>
-        <ImageBackground source={imagePath} style={styles.image}>
-          <Button title="Short Term Goals" style={styles.button} onPress= {() => {this.props.navigation.navigate(ShortTermGoals)}}/> 
-        </ImageBackground>
+export default function HomeScreen({ navigation }) {
+    return(
+        <View styles={styles.container}>
+          <StatusBar barStyle="dark-content" />
+           
+            <ImageBackground source={imagePath} style={styles.image}>
+                <Button title="Short Term Goals" style={styles.button} onPress={() => navigation.navigate({ routeName: 'STGScreen'})} /> 
+            </ImageBackground>
+            
+            <ImageBackground source={imagePath} style={styles.image}>
+                <Button title="Long Term Goals"  style={styles.button} onPress={() => navigation.navigate({ routeName: 'LTGScreen'})}/>
+            </ImageBackground>
 
-        <ImageBackground source={imagePath} style={styles.image}>
-          <Button title="Long Term Goals"  style={styles.button} onPress= {() => {}}/> 
-        </ImageBackground>
-      </View>
-    )
-}
+        </View>
+    )}
+
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
     frame: {
       justifyContent: 'space-between',
       alignContent: 'center'
@@ -45,5 +53,3 @@ const styles = StyleSheet.create({
       justifyContent: 'space-between',
     },
   });
-
-export default HomeScreen;
