@@ -1,14 +1,24 @@
-import React from 'react';
-import {Text, View, StatusBar} from 'react-native';
+import React, {useState} from 'react';
+import {Text, View, StatusBar, Modal} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';  
 
-export default class STGScreen extends React.Component{
-    render(){
-        return(
-            <View>
-                <StatusBar barStyle="dark-content" />
-                <Text>STG</Text>
-            </View>
-        );
-    }
+export default function STGScreen({ navigation }) {  
+    const [modalVisible, setModalVisible] = useState(false);
+
+    return(
+        <View>
+            <StatusBar barStyle="dark-content" />
+
+            <Modal visible={modalVisible} animationType='slide'>
+                <View>
+                <Icon name="ios-close" size={25} onPress={() => setModalVisible(false)}/> 
+                <Text>Hello from the modal</Text>
+                </View>
+            </Modal>
+
+            <Icon name="ios-add" size={25} onPress={() => setModalVisible(true)}/> 
+            <Text>STG</Text>
+        </View>
+    );
 }
 
