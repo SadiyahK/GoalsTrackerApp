@@ -1,6 +1,5 @@
 import React from 'react';
-import AppNavigator from './navigation/AppNavigator';
-import HomeStack from './navigation/GoalsStack';
+import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
   return (
