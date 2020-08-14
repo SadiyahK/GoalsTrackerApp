@@ -1,18 +1,15 @@
 import React from 'react';
-import {View, StyleSheet, Text, StatusBar } from 'react-native';
+import {View, StyleSheet, Text, StatusBar, Button } from 'react-native';
 
-export default class AccountScreen extends React.Component{
+export default function ProfileScreen({ navigation }) {
 
-    static navigationOption = {
-    };
-
-    render(){
     return(
         <View styles={styles.container}>
             <StatusBar barStyle="dark-content" />
-            <Text>Account</Text>
+            <Text>profile</Text>
+            <Button title="settings" onPress={() => navigation.navigate({ routeName: 'SettingsScreen'})} />
         </View>
-    )}
+    )
 }
 
 const styles = StyleSheet.create({

@@ -1,11 +1,9 @@
-import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
-import BottomTabNavigation from './BottomTabNavigator';
-
+import RootNavigator from './RootNavigator';
 
 export default createAppContainer(
   createSwitchNavigator({
-    Main: BottomTabNavigation
+    Main: RootNavigator
   })
 )

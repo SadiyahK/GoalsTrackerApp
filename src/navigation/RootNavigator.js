@@ -2,13 +2,14 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';  
 
-import HomeStack from './HomeStack';
+import GoalsStack from './GoalsStack';
+import AccountStack from './AccountStack';
 import NotificationScreen from '../screens/NotificationScreen';
-import AccountScreen from '../screens/AccountScreen';
+import AccountScreen from '../screens/ProfileScreen';
 
-const BottomTabNavigator = createBottomTabNavigator({
+const RootNavigator = createBottomTabNavigator({
     Home: {
-        screen: HomeStack,
+        screen: GoalsStack,
         navigationOptions:{  
             tabBarLabel:'Home',  
             tabBarIcon:({tintColor})=>(  
@@ -26,7 +27,7 @@ const BottomTabNavigator = createBottomTabNavigator({
           }  
     },
     Account: {
-        screen: AccountScreen,
+        screen: AccountStack,
         navigationOptions:{  
             tabBarLabel:'Profile',  
             tabBarIcon:({tintColor})=>(  
@@ -36,4 +37,4 @@ const BottomTabNavigator = createBottomTabNavigator({
     }, 
 })
 
-export default BottomTabNavigator;
+export default RootNavigator;
