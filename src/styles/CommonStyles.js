@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+
+//TODO:
 export default StyleSheet.create({
     textTitle: {
         fontWeight: "bold",

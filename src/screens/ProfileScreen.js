@@ -3,6 +3,7 @@ import {View, StyleSheet, Text, StatusBar, Button } from 'react-native';
 
 export default function ProfileScreen({ navigation }) {
 
+    //TODO: 
     return(
         <View styles={styles.container}>
             <StatusBar barStyle="dark-content" />
