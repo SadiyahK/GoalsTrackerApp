@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import GoalsStack from './GoalsStack';
 import AccountStack from './AccountStack';
 import NotificationScreen from '../screens/NotificationScreen';
-import AccountScreen from '../screens/ProfileScreen';
 
 const RootNavigator = createBottomTabNavigator({
     Home: {
