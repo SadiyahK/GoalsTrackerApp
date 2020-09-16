@@ -5,7 +5,7 @@ The focus of this project is to teach myself React Native and basic app developm
 
 # Features Of The App 
 
-In the initial prototype of the app, the fetures I am aiming to achieve are:
+In the initial prototype of the app, the features I am aiming to achieve are:
     -The user can create an account using a secure sign in process.
     -The user can add and remove goals that they wish to keep track of.
     -The user can add daily/weekly logs of the progress they have made towards a particular goal.
